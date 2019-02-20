@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "98802804154",
+    "firebase_url": "https://expressroom-5838f.firebaseio.com",
+    "project_id": "expressroom-5838f",
+    "storage_bucket": "expressroom-5838f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98802804154:android:6713dfb29c6cd5cc",
+        "android_client_info": {
+          "package_name": "com.itcom202.expressroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98802804154-pbh02a6b97icvfvfhdgeesg2uell9ebl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIPwHlRpvD7VYBmWzo9gYP36VSrj3XWrE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
