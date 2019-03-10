@@ -28,14 +28,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class  MainActivity extends AppCompatActivity {
     private final static int RC_SIGN_IN = 9001;
     private final static String TAG = "MainACtivity";
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
-
-public class MainActivity extends AppCompatActivity {
     public EditText emailId, passwd;
     Button btnSignUp;
     TextView signIn;
