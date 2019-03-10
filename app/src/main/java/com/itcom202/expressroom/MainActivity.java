@@ -2,9 +2,14 @@ package com.itcom202.expressroom;
 
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +19,10 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 
 public class MainActivity extends AppCompatActivity {
     public EditText emailId, passwd;
@@ -69,5 +78,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(I);
             }
         });
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo("com.itcom202.expressroom", PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                {
+                    MessageDigest md = MessageDigest.getInstance("SHA");
+                    md.update(signature.toByteArray());
+                    Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+                }
+            }}
+            catch(PackageManager.NameNotFoundException e){
+            }
+            catch(NoSuchAlgorithmException e){}
+        }
     }
-}
