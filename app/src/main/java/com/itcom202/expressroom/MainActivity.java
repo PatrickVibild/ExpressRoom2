@@ -2,10 +2,15 @@ package com.itcom202.expressroom;
 
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +31,11 @@ import com.google.firebase.auth.FirebaseAuth;
 public class  MainActivity extends AppCompatActivity {
     private final static int RC_SIGN_IN = 9001;
     private final static String TAG = "MainACtivity";
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+
+public class MainActivity extends AppCompatActivity {
     public EditText emailId, passwd;
     Button btnSignUp;
     TextView signIn;
